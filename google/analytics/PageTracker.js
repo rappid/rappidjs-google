@@ -6,7 +6,8 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             account: null,
             domain: null,
             debug: false,
-            enabled: true
+            enabled: true,
+            siteSpeedSampleRate: null
         },
 
         initialize: function () {
@@ -58,6 +59,11 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
                         var pageTracker = gat._createTracker(self.$.account);
                         if (pageTracker) {
                             pageTracker._setDomainName(self.$.domain);
+
+                            if (self.$.siteSpeedSampleRate) {
+                                pageTracker._setSiteSpeedSampleRate && pageTracker._setSiteSpeedSampleRate(self.$.siteSpeedSampleRate);
+                            }
+
                             self.$pageTracker = pageTracker;
                             self._trackQueue();
                         }
