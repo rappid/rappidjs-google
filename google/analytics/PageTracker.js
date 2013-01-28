@@ -106,9 +106,9 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
 
         /***
          *
-         * @param category
-         * @param action
-         * @param [label]
+         * @param category - The name you supply for the group of objects you want to track.
+         * @param action - A string that is uniquely paired with each category, and commonly used to define the type of user interaction for the web object.
+         * @param [label] - An optional string to provide additional dimensions to the event data.
          * @param [value]
          * @param {Boolean} [nonInteraction]
          */
