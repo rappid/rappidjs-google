@@ -133,6 +133,19 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
 
         /***
          *
+         * @param {Number} index - The slot for the custom variable. This is a number whose value can range from 1 - 5, inclusive. A custom variable should be placed in one slot only and not be re-used across different slots.
+         * @param {String} name - The name for the custom variable. This is a string that identifies the custom variable and appears in the top-level Custom Variables report of the Analytics reports.
+         * @param {String} value - The value for the custom variable. This is a string that is paired with a name. You can pair a number of values with a custom variable name. The value appears in the table list of the UI for a selected variable name. Typically, you will have two or more values for a given name. For example, you might define a custom variable name gender and supply male and female as two possible values.
+         * @param [scope] - The scope for the custom variable. Optional. As described above, the scope defines the level of user engagement with your site. It is a number whose possible values are 1 (visitor-level), 2 (session-level), or 3 (page-level). When left undefined, the custom variable scope defaults to page-level interaction.
+         */
+        setCustomVar: function(index, name, value, scope) {
+            this._queueOrExecute(function () {
+                this._setCustomVar(index, name, value, scope);
+            })
+        },
+
+        /***
+         *
          * @param {String} category - A string for categorizing all user timing variables into logical groups for easier reporting purposes. For example you might use value of jQuery if you were tracking the time it took to load that particular JavaScript library.
          * @param {String} variable - A string to indicate the name of the action of the resource being tracked. For example you might use the value of JavaScript Load if you wanted to track the time it took to load the jQuery JavaScript library. Note that same variables can be used across multiple categories to track timings for an event common to these categories such as Javascript Load and Page Ready Time, etc.
          * @param {Number} time - The number of milliseconds in elapsed time to report to Google Analytics. If the jQuery library took 20 milliseconds to load, then you would send the value of 20.
@@ -250,6 +263,12 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
     });
 
     PageTracker.Transaction.Item = Bindable.inherit('google.analytics.PageTracker.Transaction.Item', {});
+
+    PageTracker.Scope = {
+        Visitor: 1,
+        Session: 2,
+        Page: 3
+    };
 
     return PageTracker;
 });
