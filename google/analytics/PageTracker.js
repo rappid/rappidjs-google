@@ -104,7 +104,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             this._debug('trackPageView: ' + url);
         },
 
-        _debug: function(message) {
+        _debug: function (message) {
             if (this.$.debug) {
                 this.log(message);
             }
@@ -138,7 +138,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
          * @param {String} value - The value for the custom variable. This is a string that is paired with a name. You can pair a number of values with a custom variable name. The value appears in the table list of the UI for a selected variable name. Typically, you will have two or more values for a given name. For example, you might define a custom variable name gender and supply male and female as two possible values.
          * @param [scope] - The scope for the custom variable. Optional. As described above, the scope defines the level of user engagement with your site. It is a number whose possible values are 1 (visitor-level), 2 (session-level), or 3 (page-level). When left undefined, the custom variable scope defaults to page-level interaction.
          */
-        setCustomVar: function(index, name, value, scope) {
+        setCustomVar: function (index, name, value, scope) {
             this._queueOrExecute(function () {
                 this._setCustomVar(index, name, value, scope);
             })
@@ -170,7 +170,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
          * @param [country] - Country to associate with transaction.
          * @return {google.analytics.PageTracker.Transaction}
          */
-        createTransaction: function(orderId, affiliation, total, tax, shipping, city, state, country) {
+        createTransaction: function (orderId, affiliation, total, tax, shipping, city, state, country) {
             return new PageTracker.Transaction({
                 orderId: orderId,
                 affiliation: affiliation,
@@ -187,14 +187,14 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
          *
          * @param {google.analytics.PageTracker.Transaction} transaction
          */
-        trackTransaction: function(transaction) {
+        trackTransaction: function (transaction) {
 
             if (!(transaction instanceof PageTracker.Transaction)) {
                 this.log('Transaction not of type PageTracker.Transaction', 'warn');
                 return;
             }
 
-            this._queueOrExecute(function(){
+            this._queueOrExecute(function () {
                 transaction.track(this);
             });
         },
@@ -238,7 +238,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
          *
          * @return {google.analytics.PageTracker.Transaction.Item}
          */
-        addItem: function(sku, name, price, quantity, category) {
+        addItem: function (sku, name, price, quantity, category) {
             var ret = new PageTracker.Transaction.Item({
                 sku: sku,
                 name: name,
@@ -251,7 +251,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             return ret;
         },
 
-        track: function(pageTracker) {
+        track: function (pageTracker) {
             pageTracker._addTrans(this.$.orderId, this.$.affiliation, this.$.total, this.$.tax, this.$.shipping, this.$.city, this.$.state, this.$.country);
             for (var i = 0; i < this.$.items.length; i++) {
                 var item = this.$.items[i];
