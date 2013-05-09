@@ -1,0 +1,6 @@
+{
+    "classes": [
+        "google.analytics.PageTracker",
+        "google.analytics.PageTracker.Transaction"
+    ]
+}

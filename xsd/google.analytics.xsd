@@ -1,0 +1,24 @@
+<schema targetNamespace="google.analytics"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns1="js.core"
+    xmlns:ns="google.analytics">
+    <import namespace="js.core"/>
+    <element name="PageTracker" type="ns:PageTracker"/>
+    <complexType name="PageTracker">
+        <complexContent>
+            <extension base="ns1:Component">
+                <annotation>
+                    <documentation source="http://www.rappidjs.com/#/api/google.analytics.PageTracker"></documentation>
+                </annotation>
+                <sequence>
+                    <any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+                </sequence>
+                <attribute name="account"/>
+                <attribute name="domain"/>
+                <attribute name="debug"/>
+                <attribute name="enabled" default="true"/>
+                <attribute name="siteSpeedSampleRate"/>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>
