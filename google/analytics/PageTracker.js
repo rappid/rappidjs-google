@@ -4,9 +4,24 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
 
         defaults: {
             account: null,
+
             domain: null,
+
+            /***
+             * enables debugging to console
+             * @type Boolean
+             */
             debug: false,
+
+            /***
+             * enables google analytics tracking
+             * @type Boolean
+             */
             enabled: true,
+
+            /***
+             * Defines a new sample set size for Site Speed data collection. By default, a fixed 1% sampling of your site visitors make up the data pool from which the Site Speed metrics are derived. If you have a relatively small number of daily visitors to your site, such as 100,000 or fewer, you might want to adjust the sampling to a larger rate. This will provide increased granularity for page load time and other Site Speed metrics.
+             */
             siteSpeedSampleRate: null
         },
 
@@ -117,6 +132,8 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
          * @param [label] - An optional string to provide additional dimensions to the event data.
          * @param [value]
          * @param {Boolean} [nonInteraction]
+         *
+         * @see https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide
          */
         trackEvent: function (category, action, label, value, nonInteraction) {
 
@@ -141,7 +158,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
         setCustomVar: function (index, name, value, scope) {
             this._queueOrExecute(function () {
                 this._setCustomVar(index, name, value, scope);
-            })
+            });
         },
 
         /***
@@ -155,7 +172,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
         trackTiming: function (category, variable, time, label, sample) {
             this._queueOrExecute(function () {
                 this._trackTiming(category, variable, time, label, sample);
-            })
+            });
         },
 
         /***
