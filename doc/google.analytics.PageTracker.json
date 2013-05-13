@@ -322,8 +322,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                107,
-                111
+                122,
+                126
             ],
             "name": "_debug",
             "visibility": "protected"
@@ -895,8 +895,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                78,
-                97
+                93,
+                112
             ],
             "name": "_queueOrExecute",
             "visibility": "protected"
@@ -943,8 +943,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                202,
-                212
+                219,
+                229
             ],
             "name": "_trackQueue",
             "visibility": "protected"
@@ -1231,8 +1231,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                173,
-                184
+                190,
+                201
             ],
             "description": "",
             "returns": {
@@ -1439,8 +1439,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                13,
-                76
+                28,
+                91
             ],
             "definedBy": "js.core.Bindable",
             "overwritesMethod": true,
@@ -1688,8 +1688,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                141,
-                145
+                158,
+                162
             ],
             "description": "",
             "name": "setCustomVar",
@@ -1760,16 +1760,20 @@
                         "Boolean"
                     ],
                     "name": "nonInteraction",
-                    "optional": true
+                    "optional": true,
+                    "description": "undefined\n"
                 }
             ],
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                121,
-                132
+                138,
+                149
             ],
             "description": "",
+            "see": [
+                "https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide"
+            ],
             "name": "trackEvent",
             "visibility": "public"
         },
@@ -1783,8 +1787,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                99,
-                105
+                114,
+                120
             ],
             "name": "trackPageView",
             "visibility": "public"
@@ -1836,8 +1840,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                155,
-                159
+                172,
+                176
             ],
             "description": "",
             "name": "trackTiming",
@@ -1857,8 +1861,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                190,
-                200
+                207,
+                217
             ],
             "description": "",
             "name": "trackTransaction",
@@ -1987,8 +1991,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                7,
-                7
+                8,
+                8
             ]
         },
         "debug": {
@@ -1997,8 +2001,12 @@
             "visibility": "public",
             "value": false,
             "lineNumbers": [
-                8,
-                8
+                14,
+                14
+            ],
+            "description": "enables debugging to console",
+            "types": [
+                "Boolean"
             ]
         },
         "enabled": {
@@ -2007,8 +2015,12 @@
             "visibility": "public",
             "value": true,
             "lineNumbers": [
-                9,
-                9
+                20,
+                20
+            ],
+            "description": "enables google analytics tracking",
+            "types": [
+                "Boolean"
             ]
         },
         "siteSpeedSampleRate": {
@@ -2017,9 +2029,10 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                10,
-                10
-            ]
+                25,
+                25
+            ],
+            "description": "Defines a new sample set size for Site Speed data collection. By default, a fixed 1% sampling of your site visitors make up the data pool from which the Site Speed metrics are derived. If you have a relatively small number of daily visitors to your site, such as 100,000 or fewer, you might want to adjust the sampling to a larger rate. This will provide increased granularity for page load time and other Site Speed metrics."
         },
         "cid": {
             "name": "cid",

@@ -15,9 +15,27 @@
                 </sequence>
                 <attribute name="account"/>
                 <attribute name="domain"/>
-                <attribute name="debug"/>
-                <attribute name="enabled" default="true"/>
-                <attribute name="siteSpeedSampleRate"/>
+                <attribute name="debug">
+                    <annotation>
+                        <documentation>
+                        enables debugging to console
+                    </documentation>
+                    </annotation>
+                </attribute>
+                <attribute name="enabled" default="true">
+                    <annotation>
+                        <documentation>
+                        enables google analytics tracking
+                    </documentation>
+                    </annotation>
+                </attribute>
+                <attribute name="siteSpeedSampleRate">
+                    <annotation>
+                        <documentation>
+                        Defines a new sample set size for Site Speed data collection. By default, a fixed 1% sampling of your site visitors make up the data pool from which the Site Speed metrics are derived. If you have a relatively small number of daily visitors to your site, such as 100,000 or fewer, you might want to adjust the sampling to a larger rate. This will provide increased granularity for page load time and other Site Speed metrics.
+                    </documentation>
+                    </annotation>
+                </attribute>
             </extension>
         </complexContent>
     </complexType>

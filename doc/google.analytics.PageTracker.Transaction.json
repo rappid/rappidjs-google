@@ -512,8 +512,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                241,
-                252
+                258,
+                269
             ],
             "description": "",
             "returns": {
@@ -937,8 +937,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                254,
-                261
+                271,
+                278
             ],
             "name": "track",
             "visibility": "public"
@@ -1056,8 +1056,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                219,
-                219
+                236,
+                236
             ]
         },
         "affiliation": {
@@ -1066,8 +1066,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                220,
-                220
+                237,
+                237
             ]
         },
         "total": {
@@ -1076,8 +1076,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                221,
-                221
+                238,
+                238
             ]
         },
         "tax": {
@@ -1086,8 +1086,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                222,
-                222
+                239,
+                239
             ]
         },
         "shipping": {
@@ -1096,8 +1096,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                223,
-                223
+                240,
+                240
             ]
         },
         "city": {
@@ -1106,8 +1106,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                224,
-                224
+                241,
+                241
             ]
         },
         "state": {
@@ -1116,8 +1116,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                225,
-                225
+                242,
+                242
             ]
         },
         "country": {
@@ -1126,8 +1126,8 @@
             "visibility": "public",
             "value": null,
             "lineNumbers": [
-                226,
-                226
+                243,
+                243
             ]
         },
         "items": {
@@ -1135,8 +1135,8 @@
             "defaultType": "factory",
             "visibility": "public",
             "lineNumbers": [
-                228,
-                228
+                245,
+                245
             ]
         }
     },
