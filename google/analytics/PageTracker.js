@@ -25,6 +25,14 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             siteSpeedSampleRate: null
         },
 
+        events: [
+        /***
+         * the trackingInitialized event is dispatched after the google analytics has been initialized
+         */
+            "on:trackingInitialized"
+        ],
+
+
         initialize: function () {
 
             var self = this,
@@ -80,6 +88,7 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
                             }
 
                             self.$pageTracker = pageTracker;
+                            self.trigger("on:trackingInitialized");
                             self._trackQueue();
                         }
                     }
