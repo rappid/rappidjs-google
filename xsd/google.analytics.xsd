@@ -36,6 +36,13 @@
                     </documentation>
                     </annotation>
                 </attribute>
+                <attribute name="ontrackingInitialized" default="_onTrackingInitializedHandler" type="string">
+                    <annotation>
+                        <documentation>
+                        the trackingInitialized event is dispatched after the google analytics has been initialized
+                    </documentation>
+                    </annotation>
+                </attribute>
             </extension>
         </complexContent>
     </complexType>

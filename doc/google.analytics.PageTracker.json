@@ -322,8 +322,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                122,
-                126
+                131,
+                135
             ],
             "name": "_debug",
             "visibility": "protected"
@@ -895,8 +895,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                93,
-                112
+                102,
+                121
             ],
             "name": "_queueOrExecute",
             "visibility": "protected"
@@ -943,8 +943,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                219,
-                229
+                228,
+                238
             ],
             "name": "_trackQueue",
             "visibility": "protected"
@@ -1231,8 +1231,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                190,
-                201
+                199,
+                210
             ],
             "description": "",
             "returns": {
@@ -1439,8 +1439,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                28,
-                91
+                36,
+                100
             ],
             "definedBy": "js.core.Bindable",
             "overwritesMethod": true,
@@ -1688,8 +1688,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                158,
-                162
+                167,
+                171
             ],
             "description": "",
             "name": "setCustomVar",
@@ -1767,8 +1767,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                138,
-                149
+                147,
+                158
             ],
             "description": "",
             "see": [
@@ -1787,8 +1787,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                114,
-                120
+                123,
+                129
             ],
             "name": "trackPageView",
             "visibility": "public"
@@ -1840,8 +1840,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                172,
-                176
+                181,
+                185
             ],
             "description": "",
             "name": "trackTiming",
@@ -1861,8 +1861,8 @@
             "annotations": {},
             "definedInFile": "google/analytics/PageTracker.js",
             "lineNumbers": [
-                207,
-                217
+                216,
+                226
             ],
             "description": "",
             "name": "trackTransaction",
@@ -2098,6 +2098,18 @@
             ],
             "propertyType": "value",
             "definedBy": "js.core.Component"
+        }
+    },
+    "events": {
+        "trackingInitialized": {
+            "type": "Event",
+            "name": "trackingInitialized",
+            "visibility": "public",
+            "lineNumbers": [
+                32,
+                32
+            ],
+            "description": "the trackingInitialized event is dispatched after the google analytics has been initialized"
         }
     },
     "fqClassName": "google.analytics.PageTracker",
