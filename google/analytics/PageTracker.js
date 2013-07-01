@@ -32,6 +32,16 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             "on:trackingInitialized"
         ],
 
+        _initializationComplete: function() {
+
+            this.callBase();
+
+            var account = this.$.account;
+
+            if (!account) {
+                this.log("Account not defined", Base.LOGLEVEL.ERROR);
+            }
+        },
 
         initialize: function () {
 
@@ -41,16 +51,10 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             this.$trackQueue = [];
             this.$pageTracker = null;
 
-            var history = this.$stage.$history,
-                account = this.$.account;
+            var history = this.$stage.$history;
 
             if (!history) {
                 this.log("History not found.", Base.LOGLEVEL.ERROR);
-                return;
-            }
-
-            if (!account) {
-                this.log("Account not defined", Base.LOGLEVEL.ERROR);
                 return;
             }
 
