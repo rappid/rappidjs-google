@@ -58,13 +58,14 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
                 return;
             }
 
-            if (!this.$.domain) {
-                var domain = window.location.host || window.location.hostname;
-                this.$.domain = domain;
-                this.log("Domain not defined. Using: " + domain);
-            }
-
             if (this.runsInBrowser()) {
+
+                if (!this.$.domain) {
+                    var domain = window.location.host || window.location.hostname;
+                    this.$.domain = domain;
+                    this.log("Domain not defined. Using: " + domain);
+                }
+
                 // only track if we run inside a browser
 
                 // bind to history events
