@@ -214,6 +214,14 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             });
         },
 
+        "set": function(key, value) {
+            this._queueOrExecute(function() {
+                this._set(key, value);
+            });
+
+            this._debug('set: ' + [key, value].join(', '));
+        },
+
         /***
          *
          * @param {google.analytics.PageTracker.Transaction} transaction
@@ -228,6 +236,8 @@ define(['require', 'js/core/Component', 'js/core/Base', 'js/core/History', 'flow
             this._queueOrExecute(function () {
                 transaction.track(this);
             });
+
+            this._debug('trackTransaction');
         },
 
         _trackQueue: function () {
